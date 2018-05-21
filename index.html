@@ -10,18 +10,25 @@
 	<link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="opponent" class="boardSection">
+	<h1><i>Magic: The Gathering</i> Tutor</h1> 
+	<div id="intro">
+		<p>The goal of Magic: The Gathering is to get your opponent to zero life. Each player starts the game with 20 life.</p>
 	</div>
-	<div id = "battlefield">
-		<div id = "landsO" class="boardSection"></div>
-		<div id="creaturesO" class="boardSection"></div>
-		<div id="creatures" class="boardSection"></div>
-		<div id = "lands" class="boardSection"></div>
-	</div>
-	<div id="player" class="boardSection">
-		<div id = "graveyard"></div>
+	<div id="draw">
+		<p>The game begins with each player drawing 7 cards. Click on the deck to draw.</p>
 		<div id="deck"><img src="./img/card_back.jpg" /></div>
 		<div id="hand"></div>
+	</div>
+	<div id="land" class="step">
+		<p>You can play one land per turn. Click on a land to place it on the battlefield.</p>
+		<p>
+		<div id="battlefield">
+			<div id="creatures">
+			</div>
+			<div id="lands">
+			</div>
+		</div>
+		
 	</div>
 </body>
 </html>
