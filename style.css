@@ -1,0 +1,20 @@
+img {
+	max-height: 16.6vh;
+	width: auto;
+	height: auto;
+	margin-left: 5px;
+}
+
+#deck {
+	margin-right: 20px;
+}
+
+#hand, #graveyard, #deck {
+	display: inline-block;
+}
+
+.boardSection {
+	min-height: 16.6vh;
+	max-height: 16.6vh;
+	padding: 5px;
+}

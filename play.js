@@ -4,6 +4,8 @@ $(function() {
 	
 		var hand = document.getElementById("hand");		
 		var deck = document.getElementById("deck");
+		var lands = document.getElementById("lands");	
+		var creatures = document.getElementById("creatures");
 		
 		//lands
 		var forest = document.createElement("img");
@@ -31,5 +33,9 @@ $(function() {
 				hand.appendChild(bear.cloneNode(true));
 			}
 		};
+		
+		$('#hand').on('click', '*', function() {
+			lands.appendChild(this);
+		});
 		
 });
