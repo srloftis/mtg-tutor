@@ -3,10 +3,11 @@ img {
 	width: auto;
 	height: auto;
 	margin-left: 5px;
+	border-radius: 8px;
 }
 
 #deck {
-	margin-right: 20px;
+	margin-right: 40px;
 }
 
 #hand, #deck {
@@ -22,6 +23,11 @@ img {
 	min-height: 200px;
 }
 
-.step {
+.step, #costDescr {
 	display: none;
 }
+
+.cost{
+	height:20px;
+}
+

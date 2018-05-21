@@ -10,25 +10,29 @@
 	<link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1><i>Magic: The Gathering</i> Tutor</h1> 
-	<div id="intro">
-		<p>The goal of Magic: The Gathering is to get your opponent to zero life. Each player starts the game with 20 life.</p>
-	</div>
-	<div id="draw">
-		<p>The game begins with each player drawing 7 cards. Click on the deck to draw.</p>
-		<div id="deck"><img src="./img/card_back.jpg" /></div>
-		<div id="hand"></div>
-	</div>
-	<div id="land" class="step">
-		<p>You can play one land per turn. Click on a land to place it on the battlefield.</p>
-		<p>
-		<div id="battlefield">
-			<div id="creatures">
-			</div>
-			<div id="lands">
+	<div class="container-fluid">
+		<h1><i>Magic: The Gathering</i> Tutor</h1> 
+		<div id="intro">
+			<p>The goal of Magic: The Gathering is to get your opponent to zero life. Each player starts the game with 20 life.</p>
+		</div>
+		<div id="draw">
+			<p>The game begins with each player drawing 7 cards. Click on the deck to draw.</p>
+			<div id="deck"><img src="./img/card_back.jpg" /></div>
+			<div id="hand"></div>
+		</div>
+		<div id="land" class="step">
+			<p>You can play one land per turn. Click on a land to place it on the battlefield.</p>
+			<p id="costDescr">Lands are used to pay the mana cost of all non-land cards. The mana cost of a card can be found in the upper right hand corner of the card. 
+			   A card with the mana cost <img src="./img/mana_f.png" class="cost"/> requires one forest.
+			   A card with the mana cost <img src="./img/mana.svg"/ class="cost"><img src="./img/mana_f.png" class="cost"/> requires one mana of any color plus one forest.
+			   To play a card, pay the mana cost by tapping the correct number of lands on the battlefield. Click on a land to tap it. Then play a card from your hand by clicking on it.</p>		
+			<div id="battlefield">
+				<div id="creatures">
+				</div>
+				<div id="lands">
+				</div>
 			</div>
 		</div>
-		
 	</div>
 </body>
 </html>
