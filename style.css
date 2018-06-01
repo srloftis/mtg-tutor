@@ -14,16 +14,12 @@ img {
 	display: inline-block;
 }
 
-.battlefield {
-	min-height: 800px;
-	max-height: 800px;
-}
-
 #lands, #creatures {
 	min-height: 200px;
+	text-align: center;
 }
 
-.step, #costDescr {
+#landDescr, #costDescr, #summonDescr, #turn2 {
 	display: none;
 }
 
@@ -31,3 +27,17 @@ img {
 	height:20px;
 }
 
+#battlefield {
+	background-color: gray;
+}
+
+#battlefield div {
+	color: dark-gray;
+	font-size: 40px;
+	padding: 10px;
+}
+
+body, #battlefield {
+	max-width: 1300px;
+    margin: auto;
+}

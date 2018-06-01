@@ -20,18 +20,25 @@
 			<div id="deck"><img src="./img/card_back.jpg" /></div>
 			<div id="hand"></div>
 		</div>
-		<div id="land" class="step">
-			<p>You can play one land per turn. Click on a land to place it on the battlefield.</p>
+		<div id="turn1">
+			<p id="landDescr">You can play one land per turn. Click on a land to place it on the battlefield.</p>
 			<p id="costDescr">Lands are used to pay the mana cost of all non-land cards. The mana cost of a card can be found in the upper right hand corner of the card. 
 			   A card with the mana cost <img src="./img/mana_f.png" class="cost"/> requires one forest.
 			   A card with the mana cost <img src="./img/mana.svg"/ class="cost"><img src="./img/mana_f.png" class="cost"/> requires one mana of any color plus one forest.
-			   To play a card, pay the mana cost by tapping the correct number of lands on the battlefield. Click on a land to tap it. Then play a card from your hand by clicking on it.</p>		
+			   To play a card, pay the mana cost by tapping the correct number of lands on the battlefield. Click on a land to tap it. Then play a card from your hand by clicking on it.</p>	
+			<div id="summonDescr">
+				<p>A creature cannot attack or use abilities the turn it is played, so there is nothing else you can do on this turn. Click <span id="pass">here</span> to end your turn.</p>
+			</div>
 			<div id="battlefield">
+				<div>Battlefield</div>
 				<div id="creatures">
 				</div>
 				<div id="lands">
 				</div>
 			</div>
+		</div>
+		<div id="turn2">
+			<p>Start your next turn by untapping your land, then drawing a card.</p>
 		</div>
 	</div>
 </body>

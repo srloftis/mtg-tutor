@@ -1,12 +1,14 @@
 $(function() {
 	
-		var draw7 = true; 
+		var turn = 1; 
 		var landForTurn = false;
 		var mana = 0;
+		var drawStep = true;
 	
 		var hand = document.getElementById("hand");		
 		var deck = document.getElementById("deck");
 		var battlefield = document.getElementById("battlefield");
+		var pass = document.getElementById("pass");
 		
 		//initialize lands
 		var forest = document.createElement("img");
@@ -20,23 +22,30 @@ $(function() {
 		var elf = document.createElement("img");
 		elf.src = "./img/elf.jpg"
 		elf.className = 1;
-		elf.classList.add("mana");
+		elf.classList.add("tap_mana");
 		var bear = document.createElement("img");
 		bear.src = "./img/bear.jpg"
 		bear.className = 2;
 		
 		//draw starting hand
 		deck.onclick = function(){
-			if(draw7){
-				draw7 = false;
-				hand.appendChild(forest);
-				hand.appendChild(forest.cloneNode(true));
-				hand.appendChild(forest.cloneNode(true));
-				hand.appendChild(elf);
-				hand.appendChild(elf.cloneNode(true));
-				hand.appendChild(bear);
-				hand.appendChild(bear.cloneNode(true));
-				land.style.display = "block";
+			if(drawStep){
+				if(turn == 1){
+					hand.appendChild(forest);
+					hand.appendChild(forest.cloneNode(true));
+					hand.appendChild(forest.cloneNode(true));
+					hand.appendChild(elf);
+					hand.appendChild(elf.cloneNode(true));
+					hand.appendChild(bear);
+					hand.appendChild(bear.cloneNode(true));
+					document.getElementById("landDescr").style.display = "block";
+				}if(turn == 2){
+					hand.appendChild(bear.cloneNode(true));
+					landForTurn = false;
+					mana = 0;
+				}
+				turn++;
+				drawStep = false;
 			}
 		};
 		
@@ -57,19 +66,20 @@ $(function() {
 		$('#hand').on('click', '*', function() {
 			if($(this).hasClass("land") && landForTurn == false){
 				landForTurn = true;
-				lands.appendChild(this);
+				document.getElementById("lands").appendChild(this);
 				document.getElementById("costDescr").style.display = "block";
 			}
 			if($(this).hasClass(mana)){
-				creatures.appendChild(this);
+				document.getElementById("creatures").appendChild(this);
 				mana--;
+				document.getElementById("summonDescr").style.display = "block";
 			}
 			this.style.border='0px';
 		});
 		
 		//hand hover
 		$('#hand').on("mouseenter", "*", function() {
-			if(($(this).hasClass(mana) && !$(this).hasClass("land")) || ($(this).hasClass("land") && !landForTurn)){
+			if(($(this).hasClass(mana)) || ($(this).hasClass("land") && !landForTurn)){
 				this.style.border='4px solid #00FF1A';
 			}
 		});
@@ -78,5 +88,12 @@ $(function() {
 		$('#hand').on("mouseleave", "*", function() {
 			this.style.border='0px';
 		});
-
+		
+		//end turn
+		pass.onclick = function(){
+			drawStep = true;
+			turn2.style.display = "block";
+			$('.land').attr('style', 'transform: rotate(0deg)');
+			$('.land').removeClass("tapped");
+		};
 });
