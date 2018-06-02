@@ -14,9 +14,14 @@ img {
 	display: inline-block;
 }
 
+#draw {
+	margin-bottom: 15px;
+}
+
 #lands, #creatures {
 	min-height: 200px;
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 #landDescr, #costDescr, #summonDescr, #turn2 {
@@ -31,13 +36,23 @@ img {
 	background-color: gray;
 }
 
-#battlefield div {
-	color: dark-gray;
+#battlefield span {
 	font-size: 40px;
-	padding: 10px;
+	padding-left: 10px;
+	color: #333;
 }
 
 body, #battlefield {
 	max-width: 1300px;
     margin: auto;
+	color: #000;
+}
+
+#pass {
+	text-decoration: underline;
+	color: #008B00;
+}
+
+#pass:hover, #deck:hover, #hand:hover, #lands:hover {
+	cursor: pointer;
 }
