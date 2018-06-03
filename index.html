@@ -76,27 +76,52 @@
 		</div>
 		<div id="combat">
 			<h2>Combat</h2>
-			<div class="battlefield" id="combatfield">
-				<span class="label">Battlefield</span>
-				<button id="reset">Reset</button>
-				<div id="attack3">
-					<img src="./img/minotaur.jpg"/>
+			<div id="combat1">
+				<div class="battlefield combatfield">
+					<span class="label">Battlefield</span>
+					<button id="reset1">Reset</button>
+					<div id="attack3">
+						<img src="./img/minotaur.jpg"/>
+					</div>
+					<div id="creatures3">
+						<img src="./img/bear.jpg"/>
+					</div>
+					<div id="lands3">
+						<img src="./img/forest.png"/>
+						<img src="./img/forest.png"/>
+						<img src="./img/forest.png"/>
+					</div>
 				</div>
-				<div id="creatures3">
-					<img src="./img/bear.jpg"/>
-				</div>
-				<div id="lands3">
-					<img src="./img/forest.png"/>
-					<img src="./img/forest.png"/>
-					<img src="./img/forest.png"/>
+				<div id="life">
+					<svg height="550">
+						<circle id="circle" cx="150" cy="440" r="80" fill="#228b22"/>
+						<text id="circleText" x="150" y="440" text-anchor="middle" fill="#ffffff" dy=".3em">20 life</text>
+					</svg>
 				</div>
 			</div>
-			<div id="life">
-				<svg height="550">
-					<circle id="circle" cx="150" cy="440" r="80" fill="#228b22"/>
-					<text id="circleText" x="150" y="440" text-anchor="middle" fill="#ffffff" dy=".3em">20 life</text>
-				</svg>
-				
+			<div id="combat2">
+				<div class="battlefield combatfield">
+					<span class="label">Battlefield</span>
+					<button id="reset2">Reset</button>
+					<div id="attack4">
+						<img id="dragon" src="./img/dragon.jpg" data-toggle="tooltip" title="Thunderbreak Regent has flying."/>
+					</div>
+					<div id="creatures4">
+						<img id="bear" src="./img/bear.jpg" data-toggle="tooltip" title="Runeclaw Bear cannot block Thunderbreak Regent because it doesn't have flying or reach."/>
+						<img id="spider" src="./img/spider.jpg" data-toggle="tooltip" title="Giant Spider can block Thunderbreak Regent because it has reach."/>
+					</div>
+					<div id="lands4">
+						<img src="./img/forest.png"/>
+						<img src="./img/forest.png"/>
+						<img src="./img/forest.png"/>
+					</div>
+				</div>
+				<div id="life2">
+					<svg height="550">
+						<circle id="circle2" cx="150" cy="440" r="80" fill="#228b22"/>
+						<text id="circleText2" x="150" y="440" text-anchor="middle" fill="#ffffff" dy=".3em">20 life</text>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</div>

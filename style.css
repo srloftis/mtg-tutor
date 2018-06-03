@@ -16,21 +16,17 @@ img {
 	margin-right: 40px;
 }
 
-#hand, #deck, #stackfield, #stack, #stackhand, #combatfield, #life {
+#hand, #deck, #stackfield, #stack, #stackhand, .combatfield, #life, #life2 {
 	display: inline-block;
 }
 
-#draw {
-	margin-bottom: 15px;
-}
-
-#lands, #creatures, #lands2, #creatures2, #lands3, #creatures3 {
+#lands, #creatures, #lands2, #creatures2, #lands3, #creatures3, #lands4, #creatures4 {
 	min-height: 250px;
 	text-align: center;
 	padding-bottom: 10px;
 }
 
-#attack3 {
+#attack3, #attack4 {
 	text-align: center;
 	min-height: 200px;
 }
@@ -46,6 +42,7 @@ img {
 .battlefield {
 	background-color: #DCDCDC;
 	padding-top: 10px;
+	margin-top: 15px;
 }
 
 .label {
@@ -76,12 +73,12 @@ img {
 	cursor: pointer;
 }
 
-#stackfield, #combatfield {
+#stackfield, .combatfield {
 	width: 68%;
 	min-width: 200px;
 }
 
-#stack, #life {
+#stack, #life, #life2 {
 	width: 30%;
 	vertical-align: top;
 	position: relative;
@@ -123,7 +120,7 @@ img {
 	height: auto;
 }
 
-#attack3 img {
+#attack3 img, #attack4 img {
 	transform: rotate(90deg);
 }
 
@@ -131,7 +128,7 @@ svg text {
 	font-size: 36px;
 }
 
-#reset {
+#reset1, #reset2 {
 	float: right;
 	margin-right: 10px;
 }

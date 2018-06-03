@@ -134,10 +134,10 @@ $(function() {
 				"</br><p><span class='bear'>Runeclaw Bear</span> takes <strong>2</strong> damage from <span class='minotaur'>Pensive Minotaur</span>. <span class='bear'>Runeclaw Bear's</span> toughness is <strong>2</strong> so it dies and is sent to the graveyard.</p><p><span class='minotaur'>Pensive Minotaur</span> takes <strong>2</strong> damage from <span class='bear'>Runeclaw Bear</span>. <span class='minotaur'>Pensive Minotaur's</span> toughness is <strong>3</strong> so it survives with 1 toughness remaining.";
 		});
 		
-		//reset blocks
-		var resetButton = document.getElementById("reset");
+		//reset basic blocks
+		var reset1 = document.getElementById("reset1");
 		var circle = document.getElementById("circle");
-		resetButton.onclick = function(){
+		reset1.onclick = function(){
 			document.getElementById("creatures3").innerHTML = "";
 			document.getElementById("creatures3").appendChild(bear);
 			$("#circleText").text("20 life");
@@ -153,5 +153,37 @@ $(function() {
 			$("#circleText").text("18 life");
 		});
 		
+		
+		//flying blocking
+		var spider = document.getElementById("spider");
+		var dragon = document.getElementById("dragon");
+		var specialbear = document.getElementById("bear");
+		
+		spider.onclick = function() {
+			document.getElementById("creatures4").removeChild(this);
+			document.getElementById("creatures4").innerHTML = 
+				"</br><p><span class='bear'>Giant Spider</span> takes <strong>4</strong> damage from <span class='minotaur'>Thunderbreak Regent</span>. <span class='bear'>Giant Spider's</span> toughness is <strong>4</strong> so it dies and is sent to the graveyard.</p><p><span class='minotaur'>Thunderbreak Regent</span> takes <strong>2</strong> damage from <span class='bear'>Giant Spider</span>. <span class='minotaur'>Thunderbreak Regent's</span> toughness is <strong>4</strong> so it survives with 2 toughness remaining.";
+			document.getElementById("creatures4").appendChild(specialbear);
+		};
+		
+		//reset basic blocks
+		var reset2 = document.getElementById("reset2");
+		var circle2 = document.getElementById("circle2");
+		reset2.onclick = function(){
+			document.getElementById("creatures4").innerHTML = "";
+			document.getElementById("creatures4").appendChild(specialbear);
+			document.getElementById("creatures4").appendChild(spider);
+			$("#circleText2").text("20 life");
+		};
+		
+		//update life by clicking on circle
+		circle2.onclick = function(){
+			$("#circleText2").text("16 life");
+		};
+		
+		//or update life by clicking on circle text
+		$("#circleText2").on("click", function(){
+			$("#circleText2").text("16 life");
+		});		
 		
 });
