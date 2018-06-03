@@ -126,4 +126,32 @@ $(function() {
 			document.getElementById("doomstack").innerHTML = "Doom Blade";
 
 		};
+		
+		//basic blocking
+		$('#creatures3').on('click', '*', function() {
+			document.getElementById("creatures3").removeChild(this);
+			document.getElementById("creatures3").innerHTML = 
+				"</br><p><span class='bear'>Runeclaw Bear</span> takes <strong>2</strong> damage from <span class='minotaur'>Pensive Minotaur</span>. <span class='bear'>Runeclaw Bear's</span> toughness is <strong>2</strong> so it dies and is sent to the graveyard.</p><p><span class='minotaur'>Pensive Minotaur</span> takes <strong>2</strong> damage from <span class='bear'>Runeclaw Bear</span>. <span class='minotaur'>Pensive Minotaur's</span> toughness is <strong>3</strong> so it survives with 1 toughness remaining.";
+		});
+		
+		//reset blocks
+		var resetButton = document.getElementById("reset");
+		var circle = document.getElementById("circle");
+		resetButton.onclick = function(){
+			document.getElementById("creatures3").innerHTML = "";
+			document.getElementById("creatures3").appendChild(bear);
+			$("#circleText").text("20 life");
+		};
+		
+		//update life by clicking on circle
+		circle.onclick = function(){
+			$("#circleText").text("18 life");
+		};
+		
+		//or update life by clicking on circle text
+		$("#circleText").on("click", function(){
+			$("#circleText").text("18 life");
+		});
+		
+		
 });

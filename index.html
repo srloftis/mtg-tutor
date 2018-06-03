@@ -41,7 +41,7 @@
 				<p>Next, play a land. Then choose another creature to cast from your hand. Remember to pay its mana cost by tapping the correct number of lands.
 			</div>
 			<div class="battlefield">
-				<span>Battlefield</span>
+				<span class="label">Battlefield</span>
 				<div id="creatures">
 				</div>
 				<div id="lands">
@@ -57,7 +57,7 @@
 				<img src="./img/artifact.jpg"/>
 			</div>
 			<div class="battlefield" id="stackfield">
-				<span>Battlefield</span>
+				<span class="label">Battlefield</span>
 				<div id="creatures2">
 					<img src="./img/bear.jpg"/>
 				</div>
@@ -74,7 +74,31 @@
 			</div>
 			<button id="next">Next</button>
 		</div>
-		<h2>Combat</h2>
+		<div id="combat">
+			<h2>Combat</h2>
+			<div class="battlefield" id="combatfield">
+				<span class="label">Battlefield</span>
+				<button id="reset">Reset</button>
+				<div id="attack3">
+					<img src="./img/minotaur.jpg"/>
+				</div>
+				<div id="creatures3">
+					<img src="./img/bear.jpg"/>
+				</div>
+				<div id="lands3">
+					<img src="./img/forest.png"/>
+					<img src="./img/forest.png"/>
+					<img src="./img/forest.png"/>
+				</div>
+			</div>
+			<div id="life">
+				<svg height="550">
+					<circle id="circle" cx="150" cy="440" r="80" fill="#228b22"/>
+					<text id="circleText" x="150" y="440" text-anchor="middle" fill="#ffffff" dy=".3em">20 life</text>
+				</svg>
+				
+			</div>
+		</div>
 	</div>
 </body>
 </html>
