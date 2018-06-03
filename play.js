@@ -7,7 +7,6 @@ $(function() {
 	
 		var hand = document.getElementById("hand");		
 		var deck = document.getElementById("deck");
-		var battlefield = document.getElementById("battlefield");
 		var pass = document.getElementById("pass");
 		
 		//initialize lands
@@ -104,5 +103,27 @@ $(function() {
 				this.style.color = "grey";
 				this.style.cursor = "default";
 			}
+		};
+		
+		//stack cards 
+		var doomblade = document.createElement("img");
+		doomblade.src = "./img/instant.jpg"
+
+		var blossoming = document.createElement("img");
+		blossoming.src = "./img/blossoming.jpg"
+		blossoming.className = 1;
+		
+		var arrow = document.createElement("img");
+		arrow.src = "./img/arrow.ico";
+		arrow.className = "arrow";
+		
+		//stack example
+		var next = document.getElementById("next");
+		next.onclick = function(){
+			document.getElementById("creatures2").appendChild(arrow);
+			document.getElementById("creatures2").appendChild(doomblade);
+			document.getElementById("stack").appendChild(doomstack);
+			document.getElementById("doomstack").innerHTML = "Doom Blade";
+
 		};
 });

@@ -13,14 +13,17 @@
 	<div class="container-fluid">
 		<h1><i>Magic: The Gathering</i> Tutor</h1> 
 		<div id="intro">
+			<h2>Overview</h2>
 			<p>The goal of Magic: The Gathering is to get your opponent to zero life. Each player starts the game with 20 life.</p>
-		</div>
-		<div id="draw">
-			<p>The game begins with each player drawing 7 cards. Click on the deck to draw.</p>
-			<div id="deck"><img src="./img/card_back.jpg" /></div>
-			<div id="hand"></div>
+			<button>Begin</button>
 		</div>
 		<div id="creature_spells">
+			<div id="draw">
+				<h2>Creature Spells</h2>
+				<p>The game begins with each player drawing 7 cards. Click on the deck to draw.</p>
+				<div id="deck"><img src="./img/card_back.jpg" /></div>
+				<div id="hand"></div>
+			</div>
 			<p id="landDescr">You can play one land per turn. Click on a land to place it on the battlefield.</p>
 			<p id="costDescr">Lands are used to pay the mana cost of all non-land cards. The mana cost of a card can be found in the upper right hand corner of the card. 
 			   A card with the mana cost <img src="./img/mana_f.png" class="cost"/> requires one forest.
@@ -37,7 +40,7 @@
 				<p>Always draw a card at the beginning of your turn, right after everything untaps. Click on the deck to draw a card.</p>
 				<p>Next, play a land. Then choose another creature to cast from your hand. Remember to pay its mana cost by tapping the correct number of lands.
 			</div>
-			<div id="battlefield">
+			<div class="battlefield">
 				<span>Battlefield</span>
 				<div id="creatures">
 				</div>
@@ -45,6 +48,32 @@
 				</div>
 			</div>
 		</div>
+		<div id="non_creature_spells">
+			<h2>Non-creature Spells</h2>
+			<div id="spells">
+				<img src="./img/instant.jpg"/>
+				<img src="./img/sorcery.jpg"/>
+				<img src="./img/enchantment.jpg"/>
+				<img src="./img/artifact.jpg"/>
+			</div>
+			<div id="stack">
+				<div id="base">The Stack</div>
+				<div id="doomstack"></div>
+			</div>
+			<div class="battlefield" id="stackfield">
+				<span>Battlefield</span>
+				<div id="creatures2">
+					<img src="./img/bear.jpg"/>
+				</div>
+				<div id="lands2">
+					<img src="./img/forest.png"/>
+					<img src="./img/forest.png"/>
+					<img src="./img/forest.png"/>
+				</div>
+			</div>
+			<button id="next">Next</button>
+		</div>
+		<h2>Combat</h2>
 	</div>
 </body>
 </html>
