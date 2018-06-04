@@ -13,9 +13,9 @@
 	<div class="container-fluid">
 		<h1><i>Magic: The Gathering</i> Tutor</h1> 
 		<div id="intro">
-			<h2>Overview</h2>
-			<p>The goal of Magic: The Gathering is to get your opponent to zero life. Each player starts the game with 20 life.</p>
-			<button>Begin</button>
+			<p>In Magic: The Gathering, players cast creatures and other spells to attack and defend against their opponent. Each player starts the game with 20 life, and you win by getting your opponent to 0 life.</p>
+			<p>MTG Tutor is an interactive tool that teaches the basic rules of Magic: the Gathering. MTG Tutor covers how to cast creature spells, other spells, and combat.</p>
+			<div id="beginDiv"><button id="begin"><a href="#creature_spells"/>Begin</button></div>
 		</div>
 		<div id="creature_spells">
 			<div id="draw">
@@ -40,21 +40,43 @@
 				<p>Always draw a card at the beginning of your turn, right after everything untaps. Click on the deck to draw a card.</p>
 				<p>Next, play a land. Then choose another creature to cast from your hand. Remember to pay its mana cost by tapping the correct number of lands.
 			</div>
-			<div class="battlefield">
+			<div class="battlefield" id="battlefield1">
 				<span class="label">Battlefield</span>
 				<div id="creatures">
 				</div>
 				<div id="lands">
 				</div>
 			</div>
+			<button id="go_ncs"><a href="#non_creature_spells"/>Next Section</button>
 		</div>
 		<div id="non_creature_spells">
-			<h2>Non-creature Spells</h2>
+			<h2 id="ncsHeader">Non-creature Spells</h2>
 			<div id="spells">
-				<img src="./img/instant.jpg"/>
-				<img src="./img/sorcery.jpg"/>
-				<img src="./img/enchantment.jpg"/>
-				<img src="./img/artifact.jpg"/>
+				<div>
+					<p>There are other types of spells besides creatures. The main types are instants, sorceries, enchantments, and artifacts.
+					Instants can be played at any time during the game, even during your opponent's turn, as long as you can pay the mana cost.
+					You can only play sorceries, enchantments, and artifacts during your turn.</p>
+				</div>
+				<img src="./img/instant.jpg" data-toggle="tooltip" title="You can play instants at any time."/>
+				<img src="./img/sorcery.jpg" data-toggle="tooltip" title="You can only play sorceries during your turn."/>
+				<img src="./img/enchantment.jpg" data-toggle="tooltip" title="You can only play enchantments during your turn."/>
+				<img src="./img/artifact.jpg" data-toggle="tooltip" title="You can only play artifacts during your turn."/>
+				<div>
+					<h2>The Stack</h2>
+					<div style="width: 55%; display: inline-block"><p>Whenever a player casts a spell, that spell doesn't happen (resolve) immediately. Instead, the spell is added to "the stack." 
+					If the other player casts a spell in response, the new spell is added to the stack on top of the previous spell. When both players 
+					are done casting spells, the spells on the stack resolve starting with the spell on top of the stack. So, the spell that was 
+					played most recently resolves first.</p>
+					<p>Say your opponent plays Doom Blade targeting your Runeclaw Bear while you have Blossoming Defense in your hand. In response, 
+					you can tap one forest to play Blossoming Defense and add it to the stack on top of Doom Blade to save your bear. Blossoming Defense 
+					resolves first and gives Runeclaw Bear hexproof, which means that Runeclaw Bear can no longer be targeted by Doom Blade.</p>
+					<p>Click on Doom Blade to have your opponent add it to the stack.
+					<p>Tap one forest to pay the mana cost for Blossoming Defense, then click on Blossoming Defense to add it to the stack.
+					<p>Click here to resolve the spell on top of the stack.</p>
+					<p>Blossoming Defense was cast most recently, so it resolves first. Click here to finish resolving the stack.</p>
+					<p>Hexproof means that a creature cannot be targeted by your opponent's spells. Since Blossoming Defense made Runeclaw Bear hexproof, Doom Blade fizzles and has no effect.</p></div>
+					<div style="display: inline-block; vertical-align: top"><a href="#stackfield"/><img id="next" src="./img/instant.jpg"/></a></div>
+				</div>
 			</div>
 			<div class="battlefield" id="stackfield">
 				<span class="label">Battlefield</span>
@@ -71,11 +93,12 @@
 				<img id="blossom" src="./img/blossoming.jpg"/>
 				<div id="base">The Stack</div>
 				<div id="doomstack"></div>
+				<div id="blossomstack"></div>
 			</div>
-			<button id="next">Next</button>
+			<button id="go_combat"><a href="#combat"/>Next Section</button>
 		</div>
 		<div id="combat">
-			<h2>Combat</h2>
+			<h2 id="combatHeader">Combat</h2>
 			<div id="combat1">
 				<div class="battlefield combatfield">
 					<span class="label">Battlefield</span>
@@ -102,7 +125,7 @@
 			<div id="combat2">
 				<div class="battlefield combatfield">
 					<span class="label">Battlefield</span>
-					<button id="reset2">Reset</button>
+					<button id="reset2"><a href="#reset2"/>Reset</button>
 					<div id="attack4">
 						<img id="dragon" src="./img/dragon.jpg" data-toggle="tooltip" title="Thunderbreak Regent has flying."/>
 					</div>

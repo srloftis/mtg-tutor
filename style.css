@@ -31,8 +31,12 @@ img {
 	min-height: 200px;
 }
 
-#landDescr, #costDescr, #summonDescr, #turn2 {
+#draw, #landDescr, #costDescr, #summonDescr, #battlefield1, #go_ncs, #turn2, #ncsHeader, #spells, #stackfield, #stack, #go_combat, #combatHeader, #combat1, #combat2 {
 	display: none;
+}
+
+#draw {
+	margin-bottom: 15px;
 }
 
 .cost{
@@ -43,6 +47,7 @@ img {
 	background-color: #DCDCDC;
 	padding-top: 10px;
 	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .label {
@@ -69,7 +74,7 @@ img {
 	font-weight: bold;
 }
 
-#pass:hover, #deck:hover, #hand:hover, #lands:hover {
+#begin:hover, #pass:hover, #deck:hover, #hand:hover, #lands:hover {
 	cursor: pointer;
 }
 
@@ -98,16 +103,20 @@ img {
 #base {
 	border-top: 5px solid black;
 	bottom: 300px;
-	width: 80%;
+	width: 70%;
 }
 
 #doomstack {
     bottom: 325px;
-	width: 50%;
 }
 
-#next {
-	display: block;
+#blossomstack {
+	bottom: 350px;
+}
+
+#doomstack, #blossomstack { 
+	width: 50%;
+	left: 60px;
 }
 
 #spells {
@@ -131,4 +140,23 @@ svg text {
 #reset1, #reset2 {
 	float: right;
 	margin-right: 10px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+	cursor: default;
+}
+
+a {
+	color: #000;
+}
+
+#go_ncs {
+	margin-bottom: 20px;
+}
+
+#beginDiv {
+	text-align: center;
+	padding: 20px;
 }
