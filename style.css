@@ -16,7 +16,7 @@ img {
 	margin-right: 40px;
 }
 
-#hand, #deck, #stackfield, #stack, #stackhand, .combatfield, #life, #life2 {
+#hand, #deck, #stackfield, #stack, #stackhand, .combatfield, #life, #life2, #stack1, #stack2 {
 	display: inline-block;
 }
 
@@ -31,7 +31,7 @@ img {
 	min-height: 200px;
 }
 
-#draw, #landDescr, #costDescr, #summonDescr, #battlefield1, #go_ncs, #turn2, #ncsHeader, #spells, #stackfield, #stack, #go_combat, #combatHeader, #combat1, #combat2 {
+#draw, #landDescr, #costDescr, #summonDescr, #battlefield1, #go_ncs, #turn2, #ncsHeader, #spells, #stackfield, #stack, #grey2, #grey3, #grey4, #grey5, #go_combat, #combatHeader, #combat1, #combat2 {
 	display: none;
 }
 
@@ -60,12 +60,12 @@ img {
 	margin-left: 20px;
 }
 
-#pass, .bear {
+#pass, .bear, #stack1 a, #stack2 a {
 	color: #228b22;
 	font-weight: bold;
 }
 
-#pass {
+#pass, #stack1 a, #stack2 a{
 	text-decoration: underline;
 }
 
@@ -103,20 +103,23 @@ img {
 #base {
 	border-top: 5px solid black;
 	bottom: 300px;
-	width: 70%;
+	width: 65%;
 }
 
 #doomstack {
-    bottom: 325px;
+    bottom: 330px;
 }
 
 #blossomstack {
-	bottom: 350px;
+	bottom: 380px;
 }
 
 #doomstack, #blossomstack { 
 	width: 50%;
-	left: 60px;
+	left: 55px;
+	height: 50px;
+	color: #ffffff;
+	padding: 10px;
 }
 
 #spells {
@@ -127,6 +130,11 @@ img {
 	max-height: 100px;
 	width: auto;
 	height: auto;
+}
+
+#stackDescr {
+	width: 55%; 
+	display: inline-block
 }
 
 #attack3 img, #attack4 img {

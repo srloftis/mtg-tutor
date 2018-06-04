@@ -118,31 +118,47 @@ $(function() {
 		//stack cards 
 		var doomblade = document.createElement("img");
 		doomblade.src = "./img/instant.jpg"
-
-		//var blossoming = document.createElement("img");
-		//blossoming.src = "./img/blossoming.jpg"
-		//blossoming.className = 1;
 		
 		var arrow = document.createElement("img");
 		arrow.src = "./img/arrow.ico";
 		arrow.className = "arrow";
-		
-		var doomstack = document.getElementById("doomstack");
 		
 		//stack example
 		var next = document.getElementById("next");
 		next.onclick = function(){
 			document.getElementById("creatures2").appendChild(arrow);
 			document.getElementById("creatures2").appendChild(doomblade);
-			//document.getElementById("stack").appendChild(doomstack);
 			document.getElementById("doomstack").innerHTML = "Doom Blade";
+			document.getElementById("doomstack").style.backgroundColor = "#000";
+			document.getElementById("grey1").style.color = "grey";
+			document.getElementById("grey2").style.display = "block";
 		};
 		
 		var blossom = document.getElementById("blossom");
 		blossom.onclick = function(){
-			//document.getElementById("stack").appendChild(blossomstack);
 			document.getElementById("blossomstack").innerHTML = "Blossoming Defense";
+			document.getElementById("blossomstack").style.backgroundColor = "#228b22";
+			document.getElementById("grey2").style.color = "grey";
+			document.getElementById("grey3").style.display = "inline-block";
 		};
+		
+		//resolve stack top
+		$("#stack1").on("click", function(){
+			document.getElementById("grey3").style.color = "grey";
+			document.getElementById("grey4").style.display = "inline-block";
+			document.getElementById("blossomstack").innerHTML = "";
+			document.getElementById("blossomstack").style.backgroundColor = "#ffffff";
+		});
+			
+		//resolve stack bottom
+		$("#stack2").on("click", function(){
+			document.getElementById("grey4").style.color = "grey";
+			document.getElementById("grey5").style.display = "inline-block";
+			document.getElementById("doomstack").innerHTML = "";
+			document.getElementById("doomstack").style.backgroundColor = "#ffffff";
+			document.getElementById("creatures2").removeChild(arrow);
+			document.getElementById("creatures2").removeChild(doomblade);
+		});
 		
 		//skip to non creature spells section
 		$("#go_ncs").on("click", function(){
@@ -150,7 +166,6 @@ $(function() {
 			document.getElementById("spells").style.display = "block";
 			document.getElementById("stackfield").style.display = "inline-block";
 			document.getElementById("stack").style.display = "inline-block";
-			//document.getElementById("next").style.display = "block";
 			document.getElementById("go_combat").style.display = "block";
 		});
 		
@@ -159,15 +174,13 @@ $(function() {
 			if($(this).hasClass("tapped")){ //untap
 				this.style.transform = "rotate(0deg)";
 				$(this).removeClass("tapped");
-				mana--;
 			}else{ //tap
 				this.style.transform = "rotate(90deg)";
 				$(this).addClass("tapped");
-				mana++;
 			}
 		});
 		
-		//skip to non creature spells section
+		//skip to combat section
 		$("#go_combat").on("click", function(){
 			document.getElementById("combatHeader").style.display = "block";
 			document.getElementById("combat1").style.display = "block";

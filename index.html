@@ -63,18 +63,20 @@
 				<img src="./img/artifact.jpg" data-toggle="tooltip" title="You can only play artifacts during your turn."/>
 				<div>
 					<h2>The Stack</h2>
-					<div style="width: 55%; display: inline-block"><p>Whenever a player casts a spell, that spell doesn't happen (resolve) immediately. Instead, the spell is added to "the stack." 
-					If the other player casts a spell in response, the new spell is added to the stack on top of the previous spell. When both players 
-					are done casting spells, the spells on the stack resolve starting with the spell on top of the stack. So, the spell that was 
-					played most recently resolves first.</p>
-					<p>Say your opponent plays Doom Blade targeting your Runeclaw Bear while you have Blossoming Defense in your hand. In response, 
-					you can tap one forest to play Blossoming Defense and add it to the stack on top of Doom Blade to save your bear. Blossoming Defense 
-					resolves first and gives Runeclaw Bear hexproof, which means that Runeclaw Bear can no longer be targeted by Doom Blade.</p>
-					<p>Click on Doom Blade to have your opponent add it to the stack.
-					<p>Tap one forest to pay the mana cost for Blossoming Defense, then click on Blossoming Defense to add it to the stack.
-					<p>Click here to resolve the spell on top of the stack.</p>
-					<p>Blossoming Defense was cast most recently, so it resolves first. Click here to finish resolving the stack.</p>
-					<p>Hexproof means that a creature cannot be targeted by your opponent's spells. Since Blossoming Defense made Runeclaw Bear hexproof, Doom Blade fizzles and has no effect.</p></div>
+					<div id="stackDescr">
+						<div id="grey1"><p>Whenever a player casts a spell, that spell doesn't happen (resolve) immediately. Instead, the spell is added to "the stack." 
+						If the other player casts a spell in response, the new spell is added to the stack on top of the previous spell. When both players 
+						are done casting spells, the spells on the stack resolve starting with the spell on top of the stack. So, the spell that was 
+						played most recently resolves first.</p>
+						<p>Say your opponent plays Doom Blade targeting your Runeclaw Bear while you have Blossoming Defense in your hand. In response, 
+						you can tap one forest to play Blossoming Defense and add it to the stack on top of Doom Blade to save your bear. Blossoming Defense 
+						resolves first and gives Runeclaw Bear hexproof, which means that Runeclaw Bear can no longer be targeted by Doom Blade.</p>
+						<p>Click on Doom Blade to have your opponent add it to the stack.</p></div>
+						<div id="grey2"><p>Tap one forest to pay the mana cost for Blossoming Defense, then click on Blossoming Defense to add it to the stack.</p></div>
+						<div style="display: block"><div id="grey3">Click <div id="stack1"><a href="#stack1"/>here</div> to resolve the spell on top of the stack.</div></div>
+						<div style="display: block"><div id="grey4">Blossoming Defense was cast most recently, so it resolves first. Click <div id="stack2"><a href="#stack2"/>here</div> to finish resolving the stack.</div></div>
+						<div id="grey5"><p>Hexproof means that a creature cannot be targeted by your opponent's spells. Since Blossoming Defense made Runeclaw Bear hexproof, Doom Blade fizzles and has no effect.</p></div>
+					</div>
 					<div style="display: inline-block; vertical-align: top"><a href="#stackfield"/><img id="next" src="./img/instant.jpg"/></a></div>
 				</div>
 			</div>
