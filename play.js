@@ -183,6 +183,7 @@ $(function() {
 		//skip to combat section
 		$("#go_combat").on("click", function(){
 			document.getElementById("combatHeader").style.display = "block";
+			document.getElementById("combatDescr").style.display = "block";
 			document.getElementById("combat1").style.display = "block";
 			document.getElementById("combat2").style.display = "block";
 		});

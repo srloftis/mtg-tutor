@@ -14,7 +14,8 @@
 		<h1><i>Magic: The Gathering</i> Tutor</h1> 
 		<div id="intro">
 			<p>In Magic: The Gathering, players cast creatures and other spells to attack and defend against their opponent. Each player starts the game with 20 life, and you win by getting your opponent to 0 life.</p>
-			<p>MTG Tutor is an interactive tool that teaches the basic rules of Magic: the Gathering. MTG Tutor covers how to cast creature spells, other spells, and combat.</p>
+			<p>MTG Tutor is an interactive tool that teaches the basic rules of Magic: the Gathering. MTG Tutor covers how to cast creature spells, other spells, and combat. 
+			It should take about 10 minutes to play through MTG Tutor.</p>
 			<div id="beginDiv"><button id="begin"><a href="#creature_spells"/>Begin</button></div>
 		</div>
 		<div id="creature_spells">
@@ -101,7 +102,16 @@
 		</div>
 		<div id="combat">
 			<h2 id="combatHeader">Combat</h2>
+			<div id="combatDescr">
+				<p>During your turn, you can attack the other player with your creatures. During your opponent's turn, you can defend against their attack.</p>
+				<p>When your opponent attacks, you can either block their attacking creatures with your creatures or you can choose to not block and subtract the damage from your life total instead.</p>
+				<p>A creature's stats are shown in the bottom right corner of the card in the form "power / toughness." 
+				Power is how much damage a creature deals, and toughness is how much damage a creature can take before it dies.
+				For example, a creature with the stats 5 / 4 can deal 5 damage to other creatures and dies when it takes 4 damage. </p>
+				<p>All damage is removed at the end of the turn so if a creature survives a turn, it will start the next turn with its full toughness.</p>
+			</div>
 			<div id="combat1">
+				<p>In the battlefield below, you are being attacked by one of your opponent's creatures. Click on your creature to block, or click on your life total to take the damage directly.</p>
 				<div class="battlefield combatfield">
 					<span class="label">Battlefield</span>
 					<button id="reset1">Reset</button>
@@ -125,6 +135,8 @@
 				</div>
 			</div>
 			<div id="combat2">
+				<p>On this battlefield, you are being attacked by one of your opponent's creatures that has flying. Flying is a keyword ability that means the creature can only
+				be blocked by other creatures with flying or reach. There are many different keyword abilities that affect combat, but you don't need to memorize them all right away.</p>
 				<div class="battlefield combatfield">
 					<span class="label">Battlefield</span>
 					<button id="reset2"><a href="#reset2"/>Reset</button>
@@ -147,6 +159,9 @@
 						<text id="circleText2" x="150" y="440" text-anchor="middle" fill="#ffffff" dy=".3em">20 life</text>
 					</svg>
 				</div>
+				<p>You can choose to attack on every turn, or on some turns you may decide that it is safer not to attack. 
+				When a creature attacks it becomes tapped until your next turn, and tapped creatures can't block. Understanding combat is one of 
+				the most important parts of Magic: The Gathering. Now you're ready to take on your first opponent!</p>
 			</div>
 		</div>
 	</div>

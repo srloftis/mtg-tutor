@@ -16,11 +16,13 @@ img {
 	margin-right: 40px;
 }
 
-#hand, #deck, #stackfield, #stack, #stackhand, .combatfield, #life, #life2, #stack1, #stack2 {
+#hand, #deck, #stackfield, #stack, #stackhand, 
+.combatfield, #life, #life2, #stack1, #stack2 {
 	display: inline-block;
 }
 
-#lands, #creatures, #lands2, #creatures2, #lands3, #creatures3, #lands4, #creatures4 {
+#lands, #creatures, #lands2, #creatures2, #lands3, 
+#creatures3, #lands4, #creatures4 {
 	min-height: 250px;
 	text-align: center;
 	padding-bottom: 10px;
@@ -31,7 +33,10 @@ img {
 	min-height: 200px;
 }
 
-#draw, #landDescr, #costDescr, #summonDescr, #battlefield1, #go_ncs, #turn2, #ncsHeader, #spells, #stackfield, #stack, #grey2, #grey3, #grey4, #grey5, #go_combat, #combatHeader, #combat1, #combat2 {
+#draw, #landDescr, #costDescr, #summonDescr, #battlefield1, 
+#go_ncs, #turn2, #ncsHeader, #spells, #stackfield, #stack, 
+#grey2, #grey3, #grey4, #grey5, #go_combat, #combatHeader, 
+#combatDescr, #combat1, #combat2 {
 	display: none;
 }
 
@@ -46,8 +51,7 @@ img {
 .battlefield {
 	background-color: #DCDCDC;
 	padding-top: 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 .label {
@@ -74,7 +78,8 @@ img {
 	font-weight: bold;
 }
 
-#begin:hover, #pass:hover, #deck:hover, #hand:hover, #lands:hover {
+#begin:hover, #pass:hover, #deck:hover, 
+#hand:hover, #lands:hover {
 	cursor: pointer;
 }
 
@@ -167,4 +172,8 @@ a {
 #beginDiv {
 	text-align: center;
 	padding: 20px;
+}
+
+#combat2 {
+	margin-bottom: 50px;
 }
